@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+#
+#    odoo extensions
+#
+#    © 2017-now Josef Kaser (<http://www.pragmasoft.de>).
+#
+#   See the LICENSE file in the toplevel directory for copyright
+#   and license details.
+#
+-->
+
+<odoo>
+    <record id="view_partner_form" model="ir.ui.view">
+        <field name="name">Make partner company type readonly when non-commercial</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <field name="company_type" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <page name="contact_addresses" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </page>
+        </field>
+    </record>
+
+    <data noupdate="1">
+        <record id="sequence_vendor_number" model="ir.sequence">
+            <field name="name">Vendor Number</field>
+            <field name="code">vendor.number</field>
+            <field name="prefix"></field>
+            <field name="padding" eval="6"/>
+        </record>
+    </data>
+</odoo>
