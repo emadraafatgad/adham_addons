@@ -21,7 +21,8 @@ Hide Company Type and Contacts
         "purchase",
     ],
     "data": [
-        "data/sequencer.xml"
+        "data/sequencer.xml",
+        "views/partner.xml"
     ],
     "installable": True,
     "auto_install": False,
